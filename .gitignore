@@ -1,0 +1,4 @@
+node_modules/
+
+# dont forget to add gitignore file,
+# so that node_modules folder is not pushed to git :-)

@@ -7,6 +7,9 @@
         <span id="result"></span>
     </div>
 </body>
+
+<!-- Great, Keegs, completed the exercises 1 to 5 of Module 5. :-) -->
+
 <script>
 
     let num1=6;
@@ -14,12 +17,12 @@
 
     // using Query parameters
 
-    fetch(`/calculator/add?number1=${num1}&number2=${num2}`)
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById("result").innerHTML = data.result;
-  
-    })
+    // fetch(`/calculator/add?number1=${num1}&number2=${num2}`)
+    // .then(response => response.json())
+    // .then(data => {
+    //     document.getElementById("result").innerHTML = data.result;
+
+    // })
 
     // using path parameters
     // fetch(`/calculator/add/${num1}/${num2}`)
@@ -30,18 +33,19 @@
     // })
 
     // using body
-    // fetch(`/calculator/add`, {
-    //     method: 'POST',
-    //     headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //     },
-    //     body: JSON.stringify({number1: 5, number2: 10})
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     document.getElementById("result").innerHTML = data.result;
-    //     console.log(data)
-    // })
+    fetch(`/calculator/add`, {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({number1: 10, number2: 10})
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerHTML = data.result;
+            console.log(data)
+    })
+
 </script>
 </html>
