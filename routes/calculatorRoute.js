@@ -4,10 +4,10 @@ var router = express.Router()
 
 var calculatorController = require('../controllers/calculatorController')
 
-//get request returns the form,
+//get returns the request body
 router.get("/add", calculatorController.addGetNumbers);
 
-//post request returns the result
+//post request processes the request body
 router.post("/add", calculatorController.addPostNumbers);
 
 
