@@ -7,6 +7,7 @@
       Result
       <span id="result"></span>
     </div>
+<<<<<<< HEAD
   </body>
   <script>
     let num1 = 6;
@@ -19,6 +20,25 @@
       .then((data) => {
         document.getElementById("result").innerHTML = data.result;
       });
+=======
+</body>
+
+<!-- Great, Keegs, completed the exercises 1 to 5 of Module 5. :-) -->
+
+<script>
+
+    let num1=6;
+    let num2=4;
+
+    // using Query parameters
+
+    // fetch(`/calculator/add?number1=${num1}&number2=${num2}`)
+    // .then(response => response.json())
+    // .then(data => {
+    //     document.getElementById("result").innerHTML = data.result;
+
+    // })
+>>>>>>> 11b692cfb6cceda62748e8c2e01533ef43896a54
 
     // using path parameters
     // fetch(`/calculator/add/${num1}/${num2}`)
@@ -29,6 +49,7 @@
     // })
 
     // using body
+<<<<<<< HEAD
     // fetch(`/calculator/add`, {
     //     method: 'POST',
     //     headers: {
@@ -43,4 +64,21 @@
     //     console.log(data)
     // })
   </script>
+=======
+    fetch(`/calculator/add`, {
+        method: 'POST',
+        headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({number1: 10, number2: 10})
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById("result").innerHTML = data.result;
+            console.log(data)
+    })
+
+</script>
+>>>>>>> 11b692cfb6cceda62748e8c2e01533ef43896a54
 </html>
