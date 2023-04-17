@@ -1,25 +1,24 @@
 <html lang="en">
-<head>
+  <head>
     <title>Calculator Example</title>
-</head>
-<body>
-    <div>Result
-        <span id="result"></span>
+  </head>
+  <body>
+    <div>
+      Result
+      <span id="result"></span>
     </div>
-</body>
-<script>
-
-    let num1=6;
-    let num2=4;
+  </body>
+  <script>
+    let num1 = 6;
+    let num2 = 4;
 
     // using Query parameters
 
     fetch(`/calculator/add?number1=${num1}&number2=${num2}`)
-    .then(response => response.json())
-    .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         document.getElementById("result").innerHTML = data.result;
-  
-    })
+      });
 
     // using path parameters
     // fetch(`/calculator/add/${num1}/${num2}`)
@@ -43,5 +42,5 @@
     //     document.getElementById("result").innerHTML = data.result;
     //     console.log(data)
     // })
-</script>
+  </script>
 </html>

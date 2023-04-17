@@ -1,9 +1,9 @@
-var express = require('express')
+var express = require("express");
 
-var router = express.Router()
+var router = express.Router();
 
-var calculatorController = require('../controllers/calculatorController')
+var calculatorController = require("../controllers/calculatorController");
 
-router.get('/add', calculatorController.addNumbers)
+router.get("/add", calculatorController.addNumbers);
 
-module.exports = router
+module.exports = router;
